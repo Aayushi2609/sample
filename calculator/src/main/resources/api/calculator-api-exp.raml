@@ -1,0 +1,56 @@
+#%RAML 1.0
+title: calculator-api-exp
+version: v1
+protocols:
+  - HTTPS
+
+/addition:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "Message" : "Addition is 50"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "Message" : "Bad Request"
+              }
+
+/division:
+  get:
+    queryParameters:
+      number1:
+        required: true
+        type: integer
+      number2:
+        required: true
+        type: integer
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "Message" : "Division is 50"
+              }
+      400:
+        body:
+          application/json:
+            example:
+              {
+                "Message" : "Bad Request"
+              }
+
